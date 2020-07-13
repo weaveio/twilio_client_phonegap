@@ -9,6 +9,10 @@
     <author>Stevie Graham/Lyle Pratt/Jeff Linwood</author>
     <license>Apache</license>
 
+    <js-module name="Twilio" src="js/tcPlugin.js">
+        <clobbers target="window.plugins.Twilio" />
+    </js-module>
+
     <asset src="www/tcPlugin.js" target="js/tcPlugin.js" />
 
     <!-- android -->
@@ -50,7 +54,14 @@
           </feature>
         </config-file>
 
-        <framework src="TwilioSDK" type="podspec" spec="=1.2.7" />
+        <podspec>
+            <config>
+                <source url="https://cdn.cocoapods.org/"/>
+            </config>
+            <pods>
+                <pod name="TwilioSDK" spec="~> 1.2.7"/>
+            </pods>
+        </podspec>
 
 
         <!-- Add support for background VOIP and audio to the plist -->

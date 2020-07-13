@@ -140,9 +140,10 @@
     }
 
     TwilioPlugin.install = function() {
-        if (!window.Twilio) window.Twilio = {};
-        if (!window.Twilio.Device) window.Twilio.Device = new TwilioPlugin.Device();
-        if (!window.Twilio.Connection) window.Twilio.Connection = new TwilioPlugin.Connection();
+        if (!window.plugins) window.plugins = {};
+        if (!window.plugins.Twilio) window.plugins.Twilio = {};
+        if (!window.plugins.Twilio.Device) window.plugins.Twilio.Device = new TwilioPlugin.Device();
+        if (!window.plugins.Twilio.Connection) window.plugins.Twilio.Connection = new TwilioPlugin.Connection();
     }
  TwilioPlugin.install();
 
