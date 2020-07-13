@@ -9,7 +9,7 @@
     <author>Stevie Graham/Lyle Pratt/Jeff Linwood</author>
     <license>Apache</license>
 
-    <js-module name="Twilio" src="js/tcPlugin.js">
+    <js-module name="Twilio" src="www/tcPlugin.js">
         <clobbers target="window.plugins.Twilio" />
     </js-module>
 
